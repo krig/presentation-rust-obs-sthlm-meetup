@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>openSUSE Presentation Template</title>
+    <title>rust and the OBS - openSUSE conf, 2016</title>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/opensuse.css">
     <link rel="stylesheet" href="lib/css/github.css">
@@ -30,8 +30,13 @@
 
           <div class="title-name">Kristoffer Gr&ouml;nlund, SUSE</div>
           <div class="title-mail">github.com/krig</div>
-           </section>
-        <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
+        </section>
+        <section>
+          <div id="qrcode"></div>
+          <div>
+            https://github.com/krig
+          </div>
+        </section>
         <section data-markdown="slides.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$"></section>
         <section>
           <h2>Please help us!</h2>
@@ -61,6 +66,14 @@ terms of the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Comm
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script type="text/javascript">
+      new QRCode(document.getElementById("qrcode"), "https://github.com/krig");
+      var qrimage = document.querySelector("#qrcode img");
+      qrimage.style.marginLeft = "auto";
+      qrimage.style.marginRight = "auto";
+      qrimage.style.border = "32px solid white";
+    </script>          
     <script>
       Reveal.initialize({
         controls: true,
