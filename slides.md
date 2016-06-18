@@ -284,16 +284,30 @@ $ cargo build
 
 ---
 
-## problems
+# Bootstrapping rustc
 
-* Bootstrapping rustc
-* Bootstrapping cargo
-* Packaging crates
-* Static linking
-* Slow compilation
-* Lack of time...
+---
+
+# Bootstrapping cargo
+
+---
+
+# Packaging crates
+
+---
+
+`golang-packaging` + `gem2rpm`
 
 ---
 
 ## `cargo-packaging`
 #### `crate2rpm`
+
+---
+
+## Unsolved Issues
+
+* Static linking
+* No stable ABI
+* Slow compilation
+* Can't use packaged LLVM
