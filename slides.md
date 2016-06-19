@@ -1,8 +1,45 @@
 <img src="img/rust_logo_white.svg" height="300px">
 
+> Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
+
+<small>&mdash; <a href="http://rust-lang.org">rust-lang.org</a></small>
+
 ---
 
-hello.rs
+### install
+
+```bash
+$ zypper ar obs://devel:languages:rust devel:languages:rust
+$ zypper in rustc cargo-bootstrap
+```
+
+---
+
+<img src="img/butwhy.jpg" >
+
+--
+
+# Zero Overhead
+
+--
+
+# Memory Safety
+
+--
+
+# Thread Safety
+
+--
+
+# High Performance
+
+--
+
+# Interoperability
+
+---
+
+### hello.rs
 
 ```rust
 fn main() {
@@ -12,7 +49,7 @@ fn main() {
 
 ---
 
-compiling and running*
+### compile and run
 
 ```
 $ rustc hello.rs
@@ -24,32 +61,28 @@ Hello World!
 
 
 ```rust
+use std::sync::{ Arc, Mutex };
+use std::sync::mpsc::channel;
+use std::collections::HashMap;
 fn main() {
-    // A simple integer calculator:
-    // `+` or `-` means add or subtract by 1
-    // `*` or `/` means multiply or divide by 2
-
-    let program = "+ + * - /";
-    let mut accumulator = 0;
-
-    for token in program.chars() {
-        match token {
-            '+' => accumulator += 1,
-            '-' => accumulator -= 1,
-            '*' => accumulator *= 2,
-            '/' => accumulator /= 2,
-            _ => { /* ignore everything else */ }
+    let (c_tx, c_rx) = channel();
+    let map = Arc::new(Mutex::new(HashMap::new()));
+    let tmap = map.clone();
+    std::thread::spawn(move || {
+        if let Ok(mut m) = tmap.lock() {
+            m.insert("thread", "hello");
         }
+        c_tx.send(true).unwrap();
+    });
+    if let Ok(mut m) = map.lock() {
+        m.insert("main", "hello");
     }
-
-    println!("The program \"{}\" calculates the value {}",
-              program, accumulator);
+    c_rx.recv().unwrap();
+    for (k, v) in map.lock().unwrap().iter() {
+        println!("{} says {}", k, v);
+    }
 }
 ```
-
----
-
-> Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
 
 ---
 
@@ -201,6 +234,17 @@ fn main() {
 
 ---
 
+### macros
+
+```rust
+macro_rules! println {
+    ($fmt:expr) => (print!(concat!($fmt, "\n")));
+    ($fmt:expr, $($arg:tt)*) => (print!(concat!($fmt, "\n"), $($arg)*));
+}
+```
+
+---
+
 <img src="img/cargo.png">
 
 # cargo
@@ -256,10 +300,6 @@ $ cargo build
    Compiling rand v0.3.8
    Compiling hello v0.1.0 (file:///home/you/hello)
 ```
-
----
-
-#### `devel:languages:rust`
 
 ---
 
