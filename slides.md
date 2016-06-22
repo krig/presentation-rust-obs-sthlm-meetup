@@ -245,6 +245,15 @@ macro_rules! println {
 
 ---
 
+# My Favorite Things
+
+* `if let`
+* `match`
+* `traits`
+* `cargo`
+
+---
+
 <img src="img/cargo.png">
 
 # cargo
