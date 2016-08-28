@@ -6,12 +6,15 @@
 
 ---
 
-### install
+<img src="img/tumbleweed-icon.svg">
 
-```bash
-$ zypper ar obs://devel:languages:rust devel:languages:rust
-$ zypper in rustc cargo-bootstrap
-```
+### openSUSE Tumbleweed
+
+---
+
+<img src="img/opensuse-regular-release-icon.svg">
+
+### openSUSE Leap
 
 ---
 
@@ -27,7 +30,9 @@ $ zypper in rustc cargo-bootstrap
 
 --
 
-# Thread Safety
+# Thread Safety (*)
+
+*: No data races
 
 --
 
@@ -36,6 +41,38 @@ $ zypper in rustc cargo-bootstrap
 --
 
 # Interoperability
+
+--
+
+# Firefox
+
+---
+
+<img src="img/butwhy2.jpg" >
+
+--
+
+# Why package for distributions?
+
+--
+
+# Control dependencies
+
+--
+
+# Security updates
+
+--
+
+# Stability
+
+--
+
+# openQA
+
+--
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SYRlTISvjww" frameborder="0" allowfullscreen></iframe>
 
 ---
 
@@ -312,51 +349,59 @@ $ cargo build
 
 ---
 
-# maintainers
-
-* **`mvyskocil`**
-* `KGronlund`
-* `nuklly`
-* `dmacvicar`
-* `eddybb`
-* `matwey`
-* `radekmi`
-
----
-
-## current status
+# Status
 
 #### `devel:languages:rust/rustc`
 #### `devel:languages:rust/cargo-bootstrap`
 
+<strike>
+
 **Goal:** rustc 1.10 in openSUSE:Tumbleweed
 
----
+</strike>
 
-# Bootstrapping rustc
-
----
-
-# Bootstrapping cargo
+**New goal:** rustc 1.12 in openSUSE:Tumbleweed :(
 
 ---
 
-# Packaging crates
+<img src="img/RPM_Logo.svg">
 
 ---
 
-`golang-packaging` + `gem2rpm`
+<img src="img/obs-logo.png" style="background: #eeeeee; padding: 32px; border-radius: 8px;">
 
 ---
 
-## `cargo-packaging`
-#### `crate2rpm`
+# BOOTSTRAPPING
 
 ---
 
-## Unsolved Issues
+# rustc
 
+---
+
+# cargo
+
+---
+
+# crates
+
+---
+
+# `cargo-vendor`
+
+<small>
+
+`https://github.com/alexcrichton/cargo-vendor`
+
+</small>
+
+---
+
+## Issues
+
+* 6-week release cycle
+* Slow compilation
 * Static linking
 * No stable ABI
-* Slow compilation
 * Can't use packaged LLVM
