@@ -1,3 +1,9 @@
+<img src="img/kodsnack2.png" height="450px">
+
+<a href="http://kodsnack.se">kodsnack.se</a>
+
+---
+
 <img src="img/rust_logo_white.svg" height="300px">
 
 > Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
