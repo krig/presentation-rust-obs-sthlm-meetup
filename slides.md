@@ -12,8 +12,6 @@
 
 ---
 
-# Why Rust
-
 <img src="img/butwhy.jpg" >
 
 --
@@ -42,15 +40,13 @@
 
 # Firefox
 
---
+---
 
-# Rails
+<img src="img/rails.jpg">
 
 ---
 
-# Why openSUSE
-
-<img src="img/butwhy2.jpg" >
+# Why openSUSE?
 
 --
 
