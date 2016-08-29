@@ -6,17 +6,7 @@
 
 ---
 
-<img src="img/tumbleweed-icon.svg">
-
-### openSUSE Tumbleweed
-
----
-
-<img src="img/opensuse-regular-release-icon.svg">
-
-### openSUSE Leap
-
----
+# Why Rust
 
 <img src="img/butwhy.jpg" >
 
@@ -46,13 +36,15 @@
 
 # Firefox
 
----
-
-<img src="img/butwhy2.jpg" >
-
 --
 
-# Why package for distributions?
+# Rails
+
+---
+
+# Why openSUSE
+
+<img src="img/butwhy2.jpg" >
 
 --
 
@@ -64,15 +56,27 @@
 
 --
 
-# Stability
+# Stable
+
+--
+
+# Rolling
 
 --
 
 # openQA
 
---
+---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SYRlTISvjww" frameborder="0" allowfullscreen></iframe>
+<img src="img/tumbleweed-icon.svg">
+
+### openSUSE Tumbleweed
+
+---
+
+<img src="img/opensuse-regular-release-icon.svg">
+
+### openSUSE Leap
 
 ---
 
@@ -351,8 +355,8 @@ $ cargo build
 
 # Status
 
-#### `devel:languages:rust/rustc`
-#### `devel:languages:rust/cargo-bootstrap`
+### `devel:languages:rust`
+#### `rustc-stable`, `cargo`
 
 <strike>
 
@@ -364,7 +368,7 @@ $ cargo build
 
 ---
 
-<img src="img/RPM_Logo.svg">
+<img src="img/RPM_Logo.svg" width="300px" style="background: #eeeeee; padding: 32px; border-radius: 8px;">
 
 ---
 
@@ -405,3 +409,7 @@ $ cargo build
 * Static linking
 * No stable ABI
 * Can't use packaged LLVM
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SYRlTISvjww" frameborder="0" allowfullscreen></iframe>
